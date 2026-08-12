@@ -1,12 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Venkata Ganesh</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkata Ganesh Karri | Developer Profile</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --primary: #58a6ff;
+            --primary-glow: rgba(88, 166, 255, 0.15);
+            --accent: #238636;
+            --text-main: #c9d1d9;
+            --text-heading: #f0f6fc;
+            --text-muted: #8b949e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 24px;
+        }
+
+        .profile-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 35px var(--primary-glow);
+        }
+
+        /* Avatar Container */
+        .avatar-container {
+            width: 88px;
+            height: 88px;
+            margin: 0 auto 1.25rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1f6feb, #238636);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            font-weight: 700;
+            box-shadow: 0 0 20px rgba(31, 111, 235, 0.4);
+        }
+
+        .profile-card h1 {
+            color: var(--text-heading);
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.3rem;
+        }
+
+        .subtitle {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .bio {
+            color: var(--text-main);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            color: var(--text-heading);
+            font-weight: 600;
+        }
+
+        /* Highlights Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-box {
+            background-color: rgba(22, 27, 34, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .stat-box .number {
+            color: var(--text-heading);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .stat-box .label {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            margin-top: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Skills Tags */
+        .skills-header {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .skills-list {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .skills-list li {
+            background-color: rgba(56, 139, 253, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(56, 139, 253, 0.2);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .skills-list li:hover {
+            background-color: rgba(56, 139, 253, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Action Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-primary:hover {
+            background-color: #2ea043;
+        }
+
+        .btn-secondary {
+            background-color: #21262d;
+            color: var(--text-heading);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #30363d;
+            border-color: var(--text-muted);
+        }
+    </style>
 </head>
 <body>
-  <img src="https://github.com/karrivenkataganesh.png" alt="Venkata Ganesh Karri" width="120" />
-  <h1>Venkata Ganesh Karri</h1>
-  <p>256Q1A4223</p>
+
+    <div class="profile-card">
+        <!-- Initials Avatar -->
+        <div class="avatar-container">
+            VG
+        </div>
+
+        <h1>Venkata Ganesh Karri</h1>
+        <div class="subtitle">
+            <i class="fa-solid fa-code"></i> AI Developer & Software Engineer
+        </div>
+
+        <p class="bio">
+            B.Tech student at <span class="highlight">KIET</span> specializing in building agentic AI systems, enterprise design thinking, and cloud solutions. Actively competing in global coding competitions and hackathons.
+        </p>
+
+        <!-- Key Achievements / Stats -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="number">Rank 2137</div>
+                <div class="label">TCS CodeVita</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">KIET</div>
+                <div class="label">Engineering</div>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="skills-header">Core Competencies</div>
+        <ul class="skills-list">
+            <li><i class="fa-solid fa-robot"></i> Agentic AI</li>
+            <li><i class="fa-solid fa-brain"></i> RAG Frameworks</li>
+            <li><i class="fa-cloud"></i> Google Cloud</li>
+            <li><i class="fa-solid fa-laptop-code"></i> Full Stack</li>
+            <li><i class="fa-solid fa-database"></i> Data Science</li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="cta-buttons">
+            <a href="mailto:contact@example.com" class="btn btn-primary">
+                <i class="fa-regular fa-envelope"></i> Contact Me
+            </a>
+            <a href="https://github.com" target="_blank" class="btn btn-secondary">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
+    </div>
+
 </body>
 </html>
