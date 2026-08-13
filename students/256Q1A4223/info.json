@@ -1,5 +1,63 @@
 {
-  "name": "Venkata Ganesh Karri",
-  "roll": "256Q1A4223",
-  "photo": "https://github.com/karrivenkataganesh.png"
+  "component": "ProfileCard",
+  "theme": "dark",
+  "styles": {
+    "backgroundColor": "#161b22",
+    "borderColor": "#30363d",
+    "textColor": "#c9d1d9",
+    "accentColor": "#58a6ff"
+  },
+  "content": {
+    "photo": "https://github.com/karrivenkataganesh.png",
+    "avatar": {
+      "type": "image",
+      "value": "https://github.com/karrivenkataganesh.png",
+      "fallbackInitials": "VG"
+    },
+    "header": {
+      "title": "Venkata Ganesh Karri",
+      "subtitle": "AI Developer & Software Engineer",
+      "icon": "fa-code"
+    },
+    "bio": {
+      "text": "B.Tech student at KIET specializing in building agentic AI systems, enterprise design thinking, and cloud solutions. Successfully finished Google Gen AI Cohort 2 and currently advancing through Cohort 3.",
+      "highlights": [
+        "KIET",
+        "Google Gen AI Cohort 2",
+        "Cohort 3"
+      ]
+    },
+    "stats": [
+      
+      {
+        "label": "Google Gen AI",
+        "value": "Cohort 3 Active"
+      }
+    ],
+    "skills": {
+      "sectionTitle": "Core Competencies",
+      "list": [
+        { "name": "Agentic AI", "icon": "fa-robot" },
+        { "name": "RAG Frameworks", "icon": "fa-brain" },
+        { "name": "Google Cloud", "icon": "fa-cloud" },
+        { "name": "Full Stack", "icon": "fa-laptop-code" },
+        { "name": "Data Science", "icon": "fa-database" }
+      ]
+    },
+    "actions": [
+      {
+        "label": "Contact Me",
+        "type": "primary",
+        "icon": "fa-envelope",
+        "url": "mailto:karrivenkataganesh@gmail.com"
+      },
+      {
+        "label": "GitHub",
+        "type": "secondary",
+        "icon": "fa-github",
+        "url": "https://github.com/karrivenkataganesh"
+      }
+    ]
+  }
 }
+
