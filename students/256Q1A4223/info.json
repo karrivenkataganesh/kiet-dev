@@ -20,15 +20,19 @@
       "icon": "fa-code"
     },
     "bio": {
-      "text": "B.Tech student at KIET specializing in building agentic AI systems, enterprise design thinking, and cloud solutions. Successfully finished Google Gen AI Cohort 2 and currently advancing through Cohort 3.",
+      "text": "B.Tech student (Roll No: 256Q1A4223) at KIET specializing in building agentic AI systems, enterprise design thinking, and cloud solutions. Successfully finished Google Gen AI Cohort 2 and currently advancing through Cohort 3.",
       "highlights": [
         "KIET",
+        "256Q1A4223",
         "Google Gen AI Cohort 2",
         "Cohort 3"
       ]
     },
     "stats": [
-      
+      {
+        "label": "Roll Number",
+        "value": "256Q1A4223"
+      },
       {
         "label": "Google Gen AI",
         "value": "Cohort 3 Active"
