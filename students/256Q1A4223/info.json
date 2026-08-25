@@ -16,16 +16,16 @@
     },
     "header": {
       "title": "Venkata Ganesh Karri",
-      "subtitle": "AI Developer & Software Engineer",
+      "subtitle": "Generative AI & Cloud Developer",
       "icon": "fa-code"
     },
     "bio": {
-      "text": "B.Tech student (Roll No: 256Q1A4223) at KIET specializing in building agentic AI systems, enterprise design thinking, and cloud solutions. Successfully finished Google Gen AI Cohort 2 and currently advancing through Cohort 3.",
+      "text": "B.Tech student (Roll No: 256Q1A4223) at KIET specializing in building agentic AI systems, enterprise design thinking, and cloud solutions. Active contributor in Google Cloud Gen AI Academy, Microsoft Student Ambassador applicant, and IBM Enterprise Design Thinking Practitioner.",
       "highlights": [
         "KIET",
         "256Q1A4223",
-        "Google Gen AI Cohort 2",
-        "Cohort 3"
+        "Google Cloud Gen AI Cohort 2",
+        "IBM Certified"
       ]
     },
     "stats": [
@@ -34,8 +34,12 @@
         "value": "256Q1A4223"
       },
       {
-        "label": "Google Gen AI",
-        "value": "Cohort 3 Active"
+        "label": "CodeVita Rank",
+        "value": "2137"
+      },
+      {
+        "label": "Google Cloud",
+        "value": "Gen AI Academy Cohort 2"
       }
     ],
     "skills": {
@@ -43,11 +47,17 @@
       "list": [
         { "name": "Agentic AI", "icon": "fa-robot" },
         { "name": "RAG Frameworks", "icon": "fa-brain" },
-        { "name": "Google Cloud", "icon": "fa-cloud" },
-        { "name": "Full Stack", "icon": "fa-laptop-code" },
-        { "name": "Data Science", "icon": "fa-database" }
+        { "name": "Google Cloud & Vertex AI", "icon": "fa-cloud" },
+        { "name": "Design Thinking", "icon": "fa-lightbulb" },
+        { "name": "Azure DevOps", "icon": "fa-server" },
+        { "name": "Full Stack Dev", "icon": "fa-laptop-code" }
       ]
     },
+    "certifications": [
+      "IBM Enterprise Design Thinking Practitioner",
+      "TCS CodeVita Season 13 Global Rank 2137",
+      "Google Skills Arcade"
+    ],
     "actions": [
       {
         "label": "Contact Me",
